@@ -14,6 +14,9 @@ window.addEventListener('load', function(){
                     ) && this.game.keys.indexOf(e.key)=== -1){
                     this.game.keys.push(e.key);
                 }
+                else if (e.key === ' '){
+                    this.game.player.shootTop();
+                }
                 console.log(this.game.keys);
             });
             window.addEventListener('keyup', e=> {
@@ -25,7 +28,23 @@ window.addEventListener('load', function(){
         }
     }
     class Projectile {
-
+        constructor(game,x,y){
+            this.game = game;
+            this.x = x;
+            this.y = y;
+            this.width = 10;
+            this.height = 3;
+            this.speed = 3;
+            this.markedForDelection = false;
+        }
+        update(){
+            this.x += this.speed;
+            if (this.x > this.game.width * 0.8) this.markedForDelection = true;
+        }
+        draw(context){
+            context.fillStyle = 'yellow';
+            context.fillRect(this.x, this.y, this.width, this.height);
+        }
     }
     class Praticle {
 
@@ -37,18 +56,31 @@ window.addEventListener('load', function(){
             this.height = 250;
             this.x = 20;
             this.y = 100;
-            this.speedy = 0
+            this.speedy = 0;
             this.maxSpeed = 2;
-            ;
+            this.projectiles = [];
         }
         update() {
             if (this.game.keys.includes('ArrowUp')) this.speedy = -this.maxSpeed;
             else if (this.game.keys.includes('ArrowDown')) this.speedy = this.maxSpeed;
             else this.speedy = 0;
             this.y += this.speedy
+            // handle projectiles
+            this.projectiles.forEach(projectile => {
+                projectile.update();
+            });
+            this.projectiles = this.projectiles.filter(projectile => !projectile.markedForDelection);
         }
         draw(context){
+            context.fillStyle = 'black';
             context.fillRect(this.x, this.y, this.width, this.height);
+            this.projectiles.forEach(projectile => {
+                projectile.draw(context);
+            });
+        }
+        shootTop(){
+            this.projectiles.push(new Projectile(this.game, this.x, this.y));
+            console.log(this.projectiles);
         }
     }
     class Enemy {
