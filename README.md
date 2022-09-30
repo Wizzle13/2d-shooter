@@ -2,9 +2,9 @@
   # 2D Shooter game
   
 
-  ![Open Issues](https://img.shields.io/github/issues-raw/wizzle/2d-shooter?style=plastic)
-  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/wizzle/2d-shooter?label=Closed%20Issues&style=plastic)
-  ![Last Commit](https://img.shields.io/github/last-commit/wizzle/2d-shooter?style=plastic)
+  ![Open Issues](https://img.shields.io/github/issues-raw/wizzle13/2d-shooter?style=plastic)
+  ![Closed Issues](https://img.shields.io/github/issues-closed-raw/wizzle13/2d-shooter?label=Closed%20Issues&style=plastic)
+  ![Last Commit](https://img.shields.io/github/last-commit/wizzle13/2d-shooter?style=plastic)
   
   ## Description
   Let's explore an alien planet and learn all the techniques you need to make your own 2D games with vanilla JavaScript, HTML5, CSS3 and HTML Canvas. From sprite animation to parallax backgrounds, today we will build a game completely from scratch, with no frameworks and no libraries, using just HTML, CSS and plain vanilla JavaScript. Have fun! 
@@ -30,9 +30,9 @@
   <img src="./screenshot">
 
   ## Links
-  GitHub Repository: https://github.com/wizzle/2d-shooter
+  GitHub Repository: https://github.com/wizzle13/2d-shooter
 
-  GitHub URL: https://wizzle.github.io/2d-shooter
+  GitHub URL: https://wizzle13.github.io/2d-shooter
 
 
 ![Made With](https://img.shields.io/badge/Made%20with-Ultimate%20README%20Generator-blue?style=plastic)
