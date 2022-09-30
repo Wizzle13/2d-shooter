@@ -26,5 +26,10 @@ window.addEventListener('load', function(){
     class Background{
 
     }
+    class UI {
 
+    }
+    class Game {
+        
+    }
 });
