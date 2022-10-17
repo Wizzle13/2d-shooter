@@ -27,7 +27,7 @@
   
   
   ## Screenshots
-  <img src="./screenshot">
+  <img src="./images/screenshot.png">
 
   ## Links
   GitHub Repository: https://github.com/wizzle13/2d-shooter
